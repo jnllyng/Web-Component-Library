@@ -79,11 +79,11 @@ jueun_yang_ui_garden/
 ```
 
 Each component folder contains:
-- `Component.tsx` — component implementation using Styled Components
-- `Component.types.tsx` — TypeScript interface/props definition
-- `Component.stories.tsx` — Storybook stories with controls
-- `Component.tests.tsx` — Jest tests (visibility + disabled state)
-- `index.ts` — exports
+- `Component.tsx`: component implementation using Styled Components
+- `Component.types.tsx`: TypeScript interface/props definition
+- `Component.stories.tsx`: Storybook stories with controls
+- `Component.tests.tsx`: Jest tests (visibility + disabled state)
+- `index.ts`: exports
 
 ---
 
@@ -119,8 +119,8 @@ Creates an optimized production build in the `/build` folder.
 ### Dockerfile
 
 The Dockerfile uses a multi-stage build:
-1. **Build stage** — uses `node:20-alpine` to install dependencies and build the React app
-2. **Serve stage** — uses `nginx:alpine` to serve the static production build
+1. **Build stage** uses `node:20-alpine` to install dependencies and build the React app
+2. **Serve stage** uses `nginx:alpine` to serve the static production build
 
 The working directory inside the container is `/yang_jueun_ui_garden`.
 
@@ -134,53 +134,28 @@ Make sure **Docker Desktop** is installed and running before proceeding.
 
 ## Running on localhost:8083
 
-### Step 1 — Navigate to the project folder
+### Step 1. Navigate to the project folder
 
 ```bash
 cd path/to/jueun_yang_ui_garden
 ```
 
-### Step 2 — Build the Docker image
+### Step 2. Build the Docker image
 
 ```bash
 docker build -t yang_jueun_coding_assignment12 .
 ```
 
-> This may take a few minutes on the first run as it downloads the base images and installs dependencies.
-
-### Step 3 — Run the container
+### Step 3. Run the container
 
 ```bash
 docker run --name yang_jueun_coding_assignment12 -p 8083:80 yang_jueun_coding_assignment12
 ```
 
-### Step 4 — Open in browser
+### Step 4. Open in browser
 
 ```
 http://localhost:8083
-```
-
----
-
-## Stopping the Container
-
-```bash
-docker stop yang_jueun_coding_assignment12
-```
-
-## Restarting the Container
-
-```bash
-docker start yang_jueun_coding_assignment12
-```
-
-## Rebuilding After Code Changes
-
-```bash
-docker stop yang_jueun_coding_assignment12
-docker rm yang_jueun_coding_assignment12
-docker build -t yang_jueun_coding_assignment12 .
-docker run --name yang_jueun_coding_assignment12 -p 8083:80 yang_jueun_coding_assignment12
 ```
 
 ---
@@ -200,6 +175,6 @@ docker run --name yang_jueun_coding_assignment12 -p 8083:80 yang_jueun_coding_as
 | Table       | Full table with Header, Row, Cell, Footer|
 
 All components support:
-- `disabled` prop — visually greys out the component and sets `cursor: not-allowed`
-- `backgroundColor` prop — allows custom background color via Storybook controls
+- `disabled` prop: visually greys out the component and sets `cursor: not-allowed`
+- `backgroundColor` prop: allows custom background color via Storybook controls
 - Responsive design via `@media (max-width: 600px)`
