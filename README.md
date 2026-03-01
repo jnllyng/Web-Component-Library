@@ -1,4 +1,4 @@
-# Yang Jueun — UI Component Library
+# Coding Assignment 12: Web Component Library
 
 A React component library built with TypeScript, Styled Components, and Storybook. The production build is containerized with Docker and served via Nginx on localhost port 8083.
 
