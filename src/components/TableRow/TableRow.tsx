@@ -7,6 +7,8 @@ const DISABLED_BG = "#bae6fd";
 const StyledTr = styled.tr<{ $disabled?: boolean; $bg?: string }>`
   background-color: ${({ $disabled, $bg }) =>
     $disabled ? DISABLED_BG : $bg ?? "transparent"};
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "default")};
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
 `;
 
 export const TableRow: React.FC<TableRowProps> = ({

@@ -14,7 +14,8 @@ const BaseCell = styled.td<{ $disabled?: boolean; $bg?: string; $as?: "td" | "th
 
   background-color: ${({ $disabled, $bg }) =>
     $disabled ? DISABLED_BG : $bg ?? DEFAULT_BG};
-
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "default")};
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
   color: ${({ $disabled }) => ($disabled ? "#1e3a8a" : "#111827")};
 
   @media (max-width: 600px) {

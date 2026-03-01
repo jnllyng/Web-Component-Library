@@ -1,3 +1,4 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-webpack5";
 import { RadioButton } from "./RadioButton";
 
@@ -25,6 +26,16 @@ export const Default: Story = {
     value: "a",
     checked: false,
     disabled: false,
+  },
+  render: (args) => {
+    const [checked, setChecked] = React.useState(args.checked);
+    return (
+      <RadioButton
+        {...args}
+        checked={checked}
+        onChange={() => setChecked(true)}
+      />
+    );
   },
 };
 
