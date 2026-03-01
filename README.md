@@ -319,8 +319,8 @@ The table is composed of five separate components that work together: `Table`, `
 | children              | React.ReactNode   | required | Table content               |
 | disabled              | boolean           | false    | Toggles disabled state      |
 | backgroundColor       | string            | —        | Custom background color     |
-| as *(TableCell)*      | `"td"` \| `"th"` | `"td"`   | Renders as td or th         |
-| colSpan *(TableCell)* | number            | —        | Spans multiple columns      |
+| as (TableCell)        | `"td"` \| `"th"` | `"td"`   | Renders as td or th         |
+| colSpan (TableCell)   | number            | —        | Spans multiple columns      |
 
 ---
 
