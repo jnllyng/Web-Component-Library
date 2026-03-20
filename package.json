@@ -13,11 +13,16 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(test|tests|spec).[tj]s?(x)"
+    ]
   },
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
@@ -35,10 +40,16 @@
     "@storybook/addon-docs": "^9.1.16",
     "@storybook/preset-create-react-app": "^9.1.16",
     "@storybook/react-webpack5": "^9.1.16",
+    "@testing-library/jest-dom": "^6.9.1",
     "@types/styled-components": "^5.1.36",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-storybook": "^9.1.16",
+    "husky": "^9.1.7",
     "jest": "^27.5.1",
     "jest-styled-components": "^7.2.0",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
     "prop-types": "^15.8.1",
     "storybook": "^9.1.16",
     "webpack": "^5.105.3"
@@ -48,19 +59,22 @@
       "react-app",
       "react-app/jest",
       "plugin:storybook/recommended",
-      "plugin:storybook/recommended"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "prettier"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+    "plugins": ["prettier"],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   }
 }

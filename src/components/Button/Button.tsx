@@ -1,9 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import type { ButtonProps } from "./Button.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { ButtonProps } from './Button.types';
 
-
-// Styled the button with styled-components.
 const StyledButton = styled.button<{ $disabled?: boolean; $bg?: string }>`
   padding: 12px 16px;
   border-radius: 10px;
@@ -12,12 +10,12 @@ const StyledButton = styled.button<{ $disabled?: boolean; $bg?: string }>`
   max-width: 320px;
 
   background-color: ${({ $disabled, $bg }) =>
-    $disabled ? "#d1d5db" : $bg ?? "#CB0000"};
+    $disabled ? '#d1d5db' : ($bg ?? '#CB0000')};
 
-  color: ${({ $disabled }) => ($disabled ? "#000000" : "#ffffff")};
+  color: ${({ $disabled }) => ($disabled ? '#000000' : '#ffffff')};
 
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
-  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 
   @media (max-width: 600px) {
     max-width: 100%;
