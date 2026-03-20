@@ -1,2 +1,2 @@
-export * from "./TableCell";
-export * from "./TableCell.types";
+export * from './TableCell';
+export * from './TableCell.types';

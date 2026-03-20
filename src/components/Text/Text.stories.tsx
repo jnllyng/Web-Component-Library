@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Text } from "./Text";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Text } from './Text';
 
 const meta: Meta<typeof Text> = {
-  title: "Components/Text",
+  title: 'Components/Text',
   component: Text,
   argTypes: {
-    text: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    text: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
 };
 
@@ -17,14 +17,14 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    text: "This is text",
+    text: 'This is text',
     disabled: false,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    text: "Disabled text",
+    text: 'Disabled text',
     disabled: true,
   },
 };

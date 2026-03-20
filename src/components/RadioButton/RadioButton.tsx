@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import type { RadioButtonProps } from "./RadioButton.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { RadioButtonProps } from './RadioButton.types';
 
 const Wrapper = styled.label<{
   $disabled?: boolean;
@@ -14,15 +14,15 @@ const Wrapper = styled.label<{
   border-radius: 8px;
 
   background-color: ${({ $disabled, $backgroundColor }) => {
-    if ($disabled) return "#d1d5db";
+    if ($disabled) return '#d1d5db';
     if ($backgroundColor) return $backgroundColor;
-    return "transparent";
+    return 'transparent';
   }};
 
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
-  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 
-  color: ${({ $disabled }) => ($disabled ? "#6b7280" : "#111827")};
+  color: ${({ $disabled }) => ($disabled ? '#6b7280' : '#111827')};
 
   @media (max-width: 600px) {
     width: 100%;

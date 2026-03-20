@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { TableRow } from "./TableRow";
-import { TableCell } from "../TableCell";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { TableRow } from './TableRow';
+import { TableCell } from '../TableCell';
 
 const meta: Meta<typeof TableRow> = {
-  title: "Components/Table/TableRow",
+  title: 'Components/Table/TableRow',
   component: TableRow,
   argTypes: {
-    disabled: { control: "boolean" },
-    backgroundColor: { control: "color" },
+    disabled: { control: 'boolean' },
+    backgroundColor: { control: 'color' },
   },
 };
 export default meta;
@@ -15,7 +15,7 @@ export default meta;
 type Story = StoryObj<typeof TableRow>;
 
 const Example = (disabled?: boolean) => (
-  <table style={{ width: "100%", borderCollapse: "collapse" }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
     <tbody>
       <TableRow disabled={disabled}>
         <TableCell>Row A</TableCell>

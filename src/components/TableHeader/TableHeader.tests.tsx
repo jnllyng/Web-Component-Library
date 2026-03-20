@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { TableHeader } from "./TableHeader";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { TableHeader } from './TableHeader';
 
-describe("TableHeader", () => {
-  test("is visible", () => {
+describe('TableHeader', () => {
+  test('is visible', () => {
     render(
       <table>
         <TableHeader>
@@ -14,10 +14,10 @@ describe("TableHeader", () => {
         </TableHeader>
       </table>
     );
-    expect(screen.getByText("Header")).toBeInTheDocument();
+    expect(screen.getByText('Header')).toBeInTheDocument();
   });
 
-  test("changes background color when disabled", () => {
+  test('changes background color when disabled', () => {
     const { getByTestId } = render(
       <table>
         <TableHeader disabled>
@@ -27,6 +27,8 @@ describe("TableHeader", () => {
         </TableHeader>
       </table>
     );
-    expect(getByTestId("table-header")).toHaveStyle("background-color: #bae6fd");
+    expect(getByTestId('table-header')).toHaveStyle(
+      'background-color: #bae6fd'
+    );
   });
 });

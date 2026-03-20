@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import type { HeroImageProps } from "./HeroImage.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { HeroImageProps } from './HeroImage.types';
 
 const Wrapper = styled.div<{ $disabled?: boolean; $bg?: string }>`
   width: 100%;
@@ -10,10 +10,10 @@ const Wrapper = styled.div<{ $disabled?: boolean; $bg?: string }>`
   position: relative;
 
   background-color: ${({ $disabled, $bg }) =>
-    $disabled ? "#d1d5db" : $bg ?? "#f3f4f6"};
+    $disabled ? '#d1d5db' : ($bg ?? '#f3f4f6')};
 
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "default")};
-  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'default')};
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 
   @media (max-width: 600px) {
     height: 200px;

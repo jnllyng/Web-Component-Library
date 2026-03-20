@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { TableFooter } from "./TableFooter";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { TableFooter } from './TableFooter';
 
-describe("TableFooter", () => {
-  test("is visible", () => {
+describe('TableFooter', () => {
+  test('is visible', () => {
     render(
       <table>
         <TableFooter>
@@ -14,10 +14,10 @@ describe("TableFooter", () => {
         </TableFooter>
       </table>
     );
-    expect(screen.getByText("Footer")).toBeInTheDocument();
+    expect(screen.getByText('Footer')).toBeInTheDocument();
   });
 
-  test("changes background color when disabled", () => {
+  test('changes background color when disabled', () => {
     const { getByTestId } = render(
       <table>
         <TableFooter disabled>
@@ -27,6 +27,8 @@ describe("TableFooter", () => {
         </TableFooter>
       </table>
     );
-    expect(getByTestId("table-footer")).toHaveStyle("background-color: #bae6fd");
+    expect(getByTestId('table-footer')).toHaveStyle(
+      'background-color: #bae6fd'
+    );
   });
 });

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export interface TableCellProps {
   children: React.ReactNode;
-  as?: "td" | "th";
+  as?: 'td' | 'th';
   colSpan?: number;
   disabled?: boolean;
   backgroundColor?: string;

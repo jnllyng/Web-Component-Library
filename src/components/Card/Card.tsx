@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import type { CardProps } from "./Card.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { CardProps } from './Card.types';
 
 const Wrapper = styled.article<{
   $disabled?: boolean;
@@ -13,20 +13,20 @@ const Wrapper = styled.article<{
   padding: 16px;
 
   background-color: ${({ $disabled, $backgroundColor }) => {
-    if ($disabled) return "#d1d5db";
+    if ($disabled) return '#d1d5db';
     if ($backgroundColor) return $backgroundColor;
-    return "#ffffff";
+    return '#ffffff';
   }};
 
-  border: 1px solid ${({ $disabled }) => ($disabled ? "#cbd5e1" : "#e5e7eb")};
+  border: 1px solid ${({ $disabled }) => ($disabled ? '#cbd5e1' : '#e5e7eb')};
 
   box-shadow: ${({ $disabled }) =>
-    $disabled ? "none" : "0 6px 18px rgba(0,0,0,0.08)"};
+    $disabled ? 'none' : '0 6px 18px rgba(0,0,0,0.08)'};
 
-  color: ${({ $disabled }) => ($disabled ? "#6b7280" : "#111827")};
+  color: ${({ $disabled }) => ($disabled ? '#6b7280' : '#111827')};
 
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "default")};
-  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'default')};
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 
   @media (max-width: 600px) {
     max-width: 100%;

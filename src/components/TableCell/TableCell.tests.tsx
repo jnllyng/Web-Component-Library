@@ -1,10 +1,10 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
-import "jest-styled-components";
-import { TableCell } from "./TableCell";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import 'jest-styled-components';
+import { TableCell } from './TableCell';
 
-describe("TableCell", () => {
-  test("is visible", () => {
+describe('TableCell', () => {
+  test('is visible', () => {
     render(
       <table>
         <tbody>
@@ -14,10 +14,10 @@ describe("TableCell", () => {
         </tbody>
       </table>
     );
-    expect(screen.getByText("Cell")).toBeInTheDocument();
+    expect(screen.getByText('Cell')).toBeInTheDocument();
   });
 
-  test("changes background color when disabled", () => {
+  test('changes background color when disabled', () => {
     const { getByTestId } = render(
       <table>
         <tbody>
@@ -27,6 +27,6 @@ describe("TableCell", () => {
         </tbody>
       </table>
     );
-    expect(getByTestId("table-cell")).toHaveStyle("background-color: #bae6fd");
+    expect(getByTestId('table-cell')).toHaveStyle('background-color: #bae6fd');
   });
 });

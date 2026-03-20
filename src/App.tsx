@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import { Button } from "./components/Button";
-import { Label } from "./components/Label";
-import { Text } from "./components/Text";
-import { Dropdown } from "./components/Dropdown";
-import { RadioButton } from "./components/RadioButton";
-import { Img } from "./components/Img";
-import { HeroImage } from "./components/HeroImage";
-import { Card } from "./components/Card";
-import { Table } from "./components/Table";
-import { TableHeader } from "./components/TableHeader";
-import { TableRow } from "./components/TableRow";
-import { TableCell } from "./components/TableCell";
-import { TableFooter } from "./components/TableFooter";
+import { Button } from './components/Button';
+import { Label } from './components/Label';
+import { Text } from './components/Text';
+import { Dropdown } from './components/Dropdown';
+import { RadioButton } from './components/RadioButton';
+import { Img } from './components/Img';
+import { HeroImage } from './components/HeroImage';
+import { Card } from './components/Card';
+import { Table } from './components/Table';
+import { TableHeader } from './components/TableHeader';
+import { TableRow } from './components/TableRow';
+import { TableCell } from './components/TableCell';
+import { TableFooter } from './components/TableFooter';
 
 const PageWrapper = styled.div`
   font-family: sans-serif;
@@ -51,13 +51,13 @@ const Row = styled.div`
 `;
 
 const dropdownOptions = [
-  { label: "Option A", value: "A" },
-  { label: "Option B", value: "B" },
-  { label: "Option C", value: "C" },
+  { label: 'Option A', value: 'A' },
+  { label: 'Option B', value: 'B' },
+  { label: 'Option C', value: 'C' },
 ];
 
 const App: React.FC = () => {
-  const [radioValue, setRadioValue] = useState("a");
+  const [radioValue, setRadioValue] = useState('a');
 
   return (
     <PageWrapper>
@@ -102,7 +102,7 @@ const App: React.FC = () => {
             label="Radio option"
             name="example"
             value="a"
-            checked={radioValue === "a"}
+            checked={radioValue === 'a'}
             disabled={false}
             onChange={setRadioValue}
           />
@@ -144,7 +144,11 @@ const App: React.FC = () => {
         <SectionTitle>Card</SectionTitle>
         <Row>
           <Card title="Default Card" body="Card body text" disabled={false} />
-          <Card title="Disabled Card" body="Disabled Card body text" disabled={true} />
+          <Card
+            title="Disabled Card"
+            body="Disabled Card body text"
+            disabled={true}
+          />
         </Row>
       </Section>
       <Section>
@@ -181,9 +185,15 @@ const App: React.FC = () => {
         <Table disabled={true}>
           <TableHeader disabled={true}>
             <TableRow disabled={true}>
-              <TableCell as="th" disabled={true}>Name</TableCell>
-              <TableCell as="th" disabled={true}>Director</TableCell>
-              <TableCell as="th" disabled={true}>Country</TableCell>
+              <TableCell as="th" disabled={true}>
+                Name
+              </TableCell>
+              <TableCell as="th" disabled={true}>
+                Director
+              </TableCell>
+              <TableCell as="th" disabled={true}>
+                Country
+              </TableCell>
             </TableRow>
           </TableHeader>
           <tbody>
@@ -200,7 +210,9 @@ const App: React.FC = () => {
           </tbody>
           <TableFooter disabled={true}>
             <TableRow disabled={true}>
-              <TableCell colSpan={3} disabled={true}>Footer</TableCell>
+              <TableCell colSpan={3} disabled={true}>
+                Footer
+              </TableCell>
             </TableRow>
           </TableFooter>
         </Table>

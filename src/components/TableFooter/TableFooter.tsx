@@ -1,15 +1,15 @@
-import React from "react";
-import styled from "styled-components";
-import type { TableFooterProps } from "./TableFooter.types";
+import React from 'react';
+import styled from 'styled-components';
+import type { TableFooterProps } from './TableFooter.types';
 
-const DEFAULT_BG = "#e0f2fe";
-const DISABLED_BG = "#bae6fd";
+const DEFAULT_BG = '#e0f2fe';
+const DISABLED_BG = '#bae6fd';
 
 const StyledTfoot = styled.tfoot<{ $disabled?: boolean; $bg?: string }>`
   background-color: ${({ $disabled, $bg }) =>
-    $disabled ? DISABLED_BG : $bg ?? DEFAULT_BG};
-  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "default")};
-  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+    $disabled ? DISABLED_BG : ($bg ?? DEFAULT_BG)};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'default')};
+  pointer-events: ${({ $disabled }) => ($disabled ? 'none' : 'auto')};
 `;
 
 export const TableFooter: React.FC<TableFooterProps> = ({
