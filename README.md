@@ -1,4 +1,4 @@
-# Coding Assignment 13: UC Component Library — Build Checks
+# Coding Assignment 13: UC Component Library
 
 A React component library built with TypeScript, Styled Components, and Storybook.
 This assignment extends Assignment 12 by adding code quality checks to the build process:
