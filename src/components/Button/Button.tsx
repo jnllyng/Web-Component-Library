@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import type { ButtonProps } from './Button.types';
 
+const test = 'Test';
 const StyledButton = styled.button<{ $disabled?: boolean; $bg?: string }>`
   padding: 12px 16px;
   border-radius: 10px;
